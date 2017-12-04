@@ -63,20 +63,18 @@ function createDialog() {
 
 //  }
 
-function Timer {
-    setInterval(function(){alert("YOU ARE STILL A WEEB")},10000);
-}
+ function Timer { setInterval(function(){alert("YOU ARE STILL A WEEB")},10000)
+                }
 
-function Timer2 {
-    setInterval(function(){alert("NANIIIIIIIIIIII?!?!")},10000);
-}
+ function Timer2 { setInterval(function(){alert("NANIIIIIIIIIIII?!?!")},10000)
+                }
 
-function dialogDismissed(buttonIndex) {
+// function dialogDismissed(buttonIndex) {
 	
-	if(buttonIndex==1) createMessage("You're a weeb", 4000);
-   	else if(buttonIndex==2) createMessage("NANI?", 4000);
+// 	if(buttonIndex==1) createMessage("You're a weeb", 4000);
+//   	else if(buttonIndex==2) createMessage("NANI?", 4000);
 
- }
+// }
 
 function dialogDismissed(buttonIndex) {
 	
@@ -109,5 +107,9 @@ function createNotification() {
         date: 		notificationTime, 
         badge: 		notification_count++
    	});
+    
+    cordova.plugins.notification.local.on("click", function (notification) {
+        alert("Hello there");
+});
     
 }
