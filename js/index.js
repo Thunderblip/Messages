@@ -65,8 +65,8 @@ function createDialog() {
 
 function dialogDismissed(buttonIndex) {
 	
-	if(buttonIndex==1) createmessage("You're a fuckin weeb", 4000);
-   	else if(buttonIndex==2) createmessage("NANI?", 4000);
+	if(buttonIndex==1) createMessage("You're a weeb", 4000);
+   	else if(buttonIndex==2) createMessage("NANI?", 4000);
 
  }
 
