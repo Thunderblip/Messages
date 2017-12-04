@@ -9,12 +9,13 @@ function onDeviceReady() {
 $(document).on('pageinit', function() {
 
 	$('#messageButton').on('click', function() {
-		createMessage();
+		createMessage("I Ganon, will save us", 5000);
+	});
+
+    $('#messageButton2').on('click', function() {
+		createMessage("Run away little girl, run away", 5000);
 	});
     
-    $('#messageButton2').on('click', function() {
-		createMessage2();
-	});
 	
 	$('#dialogButton').on('click', function() {
 		createDialog();
@@ -64,8 +65,8 @@ function createDialog() {
 
 function dialogDismissed(buttonIndex) {
 	
-	if(buttonIndex==1) new Toast(createmessage("You're a fuckin weeb", 4000));
-   	else if(buttonIndex==2) new Toast(createmessage("NANI?", 4000));
+	if(buttonIndex==1) createmessage("You're a fuckin weeb", 4000);
+   	else if(buttonIndex==2) createmessage("NANI?", 4000);
 
  }
 
