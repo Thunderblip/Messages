@@ -33,13 +33,13 @@ $(document).on('pageinit', function() {
 function createMessage(){		
 	//phoneGap and jQueryMobile do not support toast messages directly
     //so we can add this using toast.js
-    new Toast({content: 'Moshi moshi, genki desuka?', duration: 5000}); 
+    new Toast({content: "You're a fuckin' Weeb", duration: 4000}); 
 }
 
 function createMessage2(){		
 	//phoneGap and jQueryMobile do not support toast messages directly
     //so we can add this using toast.js
-    new Toast({content: 'NANI?', duration: 1000}); 
+    new Toast({content: 'NANI?', duration: 4000}); 
 }
         	
 
@@ -49,22 +49,29 @@ function createDialog() {
 	//here's a simple example
       
 	navigator.notification.confirm(
-    	'What do you think of this dialog?',  // message
+    	'Do you love anime?!',  // message
         dialogDismissed,         // callback
         'An example dialog!',            // title
-        ['Awesome!', 'Sucks']                  // buttons
+        ['Hell yeah!', 'Um no']                  // buttons
     );
 
 }
         	
-        	
-        	
+  
+// THIS IS ORIGINAL CODE       	
+// function dialogDismissed(buttonIndex) {
+	
+	// if(buttonIndex==1) new Toast({content: "You're easily pleased", duration: 3000});
+   	// else if(buttonIndex==2) new Toast({content: 'It is rather boring.', duration: 3000});
+
+//  }
+
 function dialogDismissed(buttonIndex) {
 	
-	if(buttonIndex==1) new Toast({content: "You're easily pleased", duration: 3000});
-   	else if(buttonIndex==2) new Toast({content: 'It is rather boring.', duration: 3000});
+	if(buttonIndex==1) new Toast(createmessage());
+   	else if(buttonIndex==2) new Toast(createmessage2());
 
-}
+ }
 
    
    
